@@ -1,0 +1,105 @@
+.newsletter {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #e1ffea22, #fde1ff);
+    
+    animation: fadeIn 1s ease-in-out;
+}
+
+.newsletter h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #131212;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter p {
+    font-size: 1.3rem;
+    color: #130e0e;
+    margin-bottom: 20px;
+}
+
+.newsletter div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.newsletter input {
+    padding: 14px;
+    width: 270px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px; 
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.newsletter input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 62, 108, 0.5);
+}
+
+.newsletter button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); 
+    border: none;
+    border-radius: 30px; 
+    width: 120px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 62, 108, 0.3);
+}
+
+.newsletter button:hover {
+    background: linear-gradient(135deg, #ff5f6d, #ff2b7a);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 62, 108, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 40px 5%;
+    }
+
+    .newsletter div {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 90%;
+    }
+
+    .newsletter button {
+        width: 90%;
+    }
+}

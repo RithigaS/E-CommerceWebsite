@@ -1,0 +1,93 @@
+.new-collections {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #e1ffea22, #fde1ff);
+    
+}
+
+.new-collections h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+hr {
+    width: 120px;
+    height: 4px;
+    background: #ff3e6c;
+    border: none;
+    margin: 10px auto;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Item card styling */
+.item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image animations */
+.item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+/* Price styling */
+.item-prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item-price-new {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff3e6c;
+}
+
+.item-price-old {
+    font-size: 1.2rem;
+    color: gray;
+    text-decoration: line-through;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .new-collections {
+        padding: 40px 5%;
+    }
+
+    .collections {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .new-collections h1 {
+        font-size: 2.3rem;
+    }
+}

@@ -1,0 +1,49 @@
+.relatedproduct {
+    padding: 40px 8%;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+    text-align: center;
+}
+
+.relatedproduct h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.relatedproduct hr {
+    width: 60px;
+    height: 4px;
+    background: #ff6b6b;
+    border: none;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+.relatedproducts-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .relatedproducts-item {
+        flex-direction: column;
+        align-items: center;
+    }
+}
